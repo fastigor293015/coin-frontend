@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'settings';
+@import 'fonts';
+@import 'header';
+@import 'authorization';
+@import 'bills';
+@import 'details';
+@import 'story';
+@import 'atms';
+@import 'currencies';

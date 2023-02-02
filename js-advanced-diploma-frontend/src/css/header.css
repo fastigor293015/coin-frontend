@@ -1,0 +1,85 @@
+@layer components {
+  .header {
+    @apply fixed z-30 top-0 right-0 left-0 bg-primary shadow-[0px_5px_20px_rgba(0,0,0,0.25)];
+  }
+
+  .header__container {
+    @apply flex items-center justify-between h-[100px] lg:h-[90px] md:h-[80px] xs:h-[60px];
+  }
+
+  .header__logo svg {
+    @apply h-[34px] w-[106px] lg:h-[30px] lg:w-[90px] xs:h-[25px] xs:w-[70px];
+  }
+
+  .header__nav {
+    @apply md:absolute md:top-full md:inset-x-1/2 md:py-[10px] md:px-0 md:border-t-[1px] md:border-t-white md:text-center md:bg-primary md:shadow-[0px_5px_20px_rgba(0,0,0,0.25)] md:opacity-0 md:pointer-events-none md:overflow-hidden xs:py-[8px] transition-[inset,padding,transform,opacity] duration-200;
+  }
+
+  .header__nav.visible {
+    @apply md:inset-x-0 md:px-[30px] md:overflow-x-scroll md:opacity-100 md:pointer-events-auto sm:px-[20px] xs:px-[15px];
+  }
+
+  .header-nav__list {
+    @apply flex gap-[25px] md:inline-flex;
+  }
+
+  .header-nav__item {
+    @apply md:opacity-0 md:translate-y-full transition-[opacity,transform] duration-200;
+  }
+
+  .header-nav__item.visible {
+    @apply md:opacity-100 md:translate-y-0;
+  }
+
+  .header-nav__link {
+    @apply md:hidden;
+  }
+
+  .header__nav.visible .header-nav__link {
+    @apply md:inline-block;
+  }
+
+  .burger {
+    @apply relative hidden h-9 w-11 p-1 border-[9px] text-white hover:border-white hover:text-primary hover:bg-white focus:border-white focus:text-primary focus:bg-white md:inline-block xs:h-[34px] xs:w-[42px];
+  }
+
+  .burger.active {
+    @apply border-white text-primary bg-white
+  }
+
+  .burger__line,
+  .burger::before,
+  .burger::after {
+    @apply absolute content-[''] top-1/2 right-0 block w-full h-[3px] rounded-sm bg-current -translate-y-1/2 transition-[top,width,transform,background,opacity] duration-200;
+  }
+
+  .burger::before {
+    @apply top-0;
+  }
+
+  .burger::after {
+    @apply top-full w-1/2;
+  }
+
+  .burger.active::before {
+    @apply top-1/2 -rotate-45;
+  }
+
+  .burger.active .burger__line {
+    @apply translate-x-1/2 opacity-0;
+  }
+
+  .burger.active::after {
+    @apply top-1/2 w-full rotate-45;
+  }
+
+  /* Для скелетной загрузки */
+
+  .header__logo.skeleton-bg-color {
+    @apply h-[50px] w-[200px] lg:h-[30px] lg:w-[90px] xs:h-[25px] xs:w-[70px];
+  }
+
+  .header-nav__item.skeleton-bg-color {
+    @apply h-[48px] w-[102px];
+  }
+}

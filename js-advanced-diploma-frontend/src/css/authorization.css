@@ -1,0 +1,17 @@
+@layer components {
+  .authorization__container {
+    @apply flex justify-center items-center min-h-screen pt-[100px] pb-[34px];
+  }
+
+  .authorization__form {
+    @apply w-[500px] p-[50px_85px_50px_115px] sm:w-full sm:p-[40px_25px_40px_90px] xs:p-[40px_25px_40px_80px];
+  }
+
+  .authorization-form__title {
+    @apply sm:mb-[25px];
+  }
+
+  .authorization-form__input-wrapper {
+    @apply basis-full min-w-full;
+  }
+}

@@ -1,0 +1,9 @@
+@layer components {
+  .atms__container {
+    @apply pt-36 pb-10 xs:pt-28;
+  }
+
+  .atms__map {
+    @apply h-[728px] xl:h-[600px] lg:h-[500px] md:h-[400px] sm:h-[300px] xs:h-[250px];
+  }
+}

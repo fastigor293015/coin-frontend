@@ -1,0 +1,105 @@
+@layer components {
+  .bills__container {
+    @apply pt-36 pb-20 xs:pt-28;
+  }
+
+  .bills__top {
+    @apply flex items-center justify-between mb-[51px] md:relative md:block xs:mb-10;
+  }
+
+  .bills__left {
+    @apply flex gap-[35px] lg:gap-[15px] md:block;
+  }
+
+  .bills__title {
+    @apply mb-0 md:mb-9;
+  }
+
+  .bills__top .choices {
+    @apply translate-y-[3px] lg:w-[260px] lg:translate-y-0 md:w-[300px] sm:w-full;
+  }
+
+  .bills__top .choices[data-type*=select-one] .choices__inner {
+    @apply border-primary text-gray2;
+  }
+
+  .bills__top .choices__list.choices__list--single .choices__item.choices__item--selectable {
+    @apply relative whitespace-nowrap invisible pointer-events-none;
+  }
+
+  .bills__top .choices__list.choices__list--single .choices__item.choices__item--selectable::before {
+    @apply content-['Сортировка'] absolute inset-0 visible pointer-events-auto;
+  }
+
+  .bills__btn_add {
+    @apply md:absolute md:top-0 md:right-0 md:-translate-y-2 xs:-translate-y-2;
+  }
+
+  .bills__list {
+    @apply grid grid-cols-3 auto-rows-max gap-x-[70px] gap-y-[50px] xl:gap-5 lg:grid-cols-2 lg:gap-[30px] md:grid-cols-1 xs:gap-5;
+    overflow: visible !important;
+  }
+
+  .bills__item {
+    @apply p-[22px] rounded-[9px] xl:p-[15px] lg:p-[22px] xs:p-4;
+    overflow: visible !important;
+  }
+
+  .bills-item__content {
+    @apply relative;
+  }
+
+  .bills-item__number {
+    @apply mb-[9px] text-secondary1 text-lg leading-[22px] tracking-[-0.01em] font-medium font-['Roboto',sans-serif] xs:text-base;
+  }
+
+  .bills-item__balance {
+    @apply block mb-[31px] text-secondary1 text-sm leading-[20px] font-medium font-['Ubuntu',sans-serif] xs:mb-[24px] xs:text-xs;
+  }
+
+  .bills-item__transaction {
+    @apply pr-32 text-[13px] leading-[15px] tracking-[-0.02em] xs:pr-28 xs:text-[11px];
+  }
+
+  .bills-item-transaction__title {
+    @apply block font-bold;
+  }
+
+  .bills-item__btn {
+    @apply absolute right-0 bottom-0 px-[19.5px] xs:px-[15px];
+  }
+
+  /* Для скелетной загрузки */
+
+  .bills__title.skeleton-bg-color {
+    @apply h-10 w-[204px] lg:w-[190px] sm:h-[35px] sm:w-[180px] xs:h-[30px] xs:w-[150px];
+  }
+
+  .bills__select.skeleton-bg-color {
+    @apply h-11 w-[300px] sm:w-full lg:w-[250px];
+  }
+
+  .bills__btn_add.skeleton-bg-color {
+    @apply h-[52px] w-[234px];
+  }
+
+  .bills__container.skeleton .bills__item {
+    @apply h-[156px] xs:h-[135px];
+  }
+
+  .bills-item__number.skeleton-bg-color {
+    @apply h-[22px] w-[40%];
+  }
+
+  .bills-item__balance.skeleton-bg-color {
+    @apply h-5 w-[15%];
+  }
+
+  .bills-item__transaction.skeleton-bg-color {
+    @apply h-[30px] w-[50%] md:w-[150px] xs:w-[130px];
+  }
+
+  .bills-item__btn.skeleton-bg-color {
+    @apply h-[52px] w-[110px] xs:h-[44px] xs:w-[93px];
+  }
+}
